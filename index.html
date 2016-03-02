@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+	   <title>Formulario de color</title>
+   </head>
+    Escribe un codigo de color: <input type="text" placeholder="introduce el codigo aqui" id="in" value="">
+    <br>
+    <br>
+    <div id="output" style="height:30px; background: blue"> </div>
+    <script>
+		function changer (id, newValue) {
+			document.getElementById(id).style.backgroundColor = newValue;
+		}
+		function escribe(){
+			var value = document.getElementById("in").value;
+			console.log(value);
+			changer("output",value);
+		}
+		var el = document.getElementById("in");
+		el.addEventListener("input", escribe, false);
+	</script>
+   
+</html>   
